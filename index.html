@@ -2,42 +2,628 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+
+		<title>Coding Alone vs Building With Teams</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+			name="description"
+			content="Coding Alone vs Building With Teams - KD Session Presentation"
 		/>
 
-		<title>reveal.js</title>
-
+		<!-- Reveal core styles -->
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
 		<link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Code highlighting -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+	:root {
+		--bg: #0f172a;
+		--card: #111827;
+		--text: #f8fafc;
+		--muted: #cbd5e1;
+		--primary: #38bdf8;
+		--border: rgba(255,255,255,0.08);
+	}
+
+	body {
+		font-family: "Inter", sans-serif;
+		background: var(--bg);
+	}
+
+	.reveal {
+		font-family: "Inter", sans-serif;
+		color: var(--text);
+	}
+
+	/* CLEAN SLIDES */
+	.reveal .slides section {
+		background: var(--card);
+		padding: 50px !important;
+		border-radius: 20px;
+		border: 1px solid var(--border);
+		text-align: left;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+	}
+
+	/* TITLE */
+	.reveal h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		text-transform: none;
+		color: white;
+	}
+
+	/* HEADINGS */
+	.reveal h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 28px;
+		text-transform: none;
+		color: white;
+	}
+
+	.reveal h3 {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: var(--primary);
+		margin-bottom: 20px;
+	}
+
+	/* TEXT */
+	.reveal p,
+	.reveal li,
+	.reveal small {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: var(--muted);
+	}
+
+	/* LIST SPACING */
+	.reveal ul {
+		margin-top: 20px;
+	}
+
+	.reveal ul li {
+		margin-bottom: 16px;
+	}
+
+	/* HIGHLIGHT */
+	.highlight {
+		color: var(--primary);
+		font-weight: 700;
+	}
+
+	/* CENTER */
+	.center-slide {
+		text-align: center !important;
+	}
+
+	/* CLEAN PROGRESS BAR */
+	.reveal .progress {
+		color: var(--primary);
+		height: 4px;
+	}
+
+	/* SLIDE NUMBER */
+	.reveal .slide-number {
+		background: rgba(0,0,0,0.5);
+		padding: 6px 12px;
+		border-radius: 10px;
+		font-size: 13px;
+	}
+
+	/* SUBTLE ANIMATION */
+	.reveal .slides section {
+		animation: slideFade 0.5s ease;
+	}
+
+
+         .reveal .slides section {
+	overflow-y: auto;
+	max-height: 95vh;
+         }
+
+
+
+	@keyframes slideFade {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* MOBILE */
+	@media (max-width: 768px) {
+		.reveal .slides section {
+			padding: 28px !important;
+		}
+
+		.reveal h1 {
+			font-size: 2rem;
+		}
+
+		.reveal h2 {
+			font-size: 1.5rem;
+		}
+
+		.reveal p,
+		.reveal li {
+			font-size: 0.95rem;
+		}
+	}
+</style>
+
+
+
 	</head>
+
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<!-- 1. TITLE -->
+				<section class="center-slide">
+					<h1>Coding Alone vs Building With Teams</h1>
+					<p class="highlight">
+						The Collaboration Skills Every Developer Needs
+					</p>
+
+					<br />
+
+					<p>
+						From “I can build features” <br />
+						to <br />
+						“We can build scalable systems together”
+					</p>
+
+					<br />
+
+					<small>Bincom Knowledge Development Session Adesemowo Emmanuel • 19th May 2026
+</small>
+				</section>
+
+				<!-- 2. OPENING -->
+				<section>
+					<h2>The Developer Reality</h2>
+
+					<p>
+						Many developers start their journey coding alone:
+					</p>
+
+					<ul>
+						<li>Personal projects</li>
+						<li>Tutorials</li>
+						<li>Freelance tasks</li>
+						<li>Solo debugging</li>
+					</ul>
+
+					<p>
+						But professional software engineering changes everything.
+					</p>
+
+					<p class="highlight">
+						Real-world software is rarely built alone.
+					</p>
+				</section>
+
+				<!-- 3. BIG QUESTION -->
+				<section>
+					<h2>The Big Question</h2>
+
+					<h3>
+						Can one developer build a real production system alone?
+					</h3>
+
+					<br />
+
+					<ul>
+						<li>Maybe the MVP</li>
+						<li>Maybe the first version</li>
+						<li>Maybe small applications</li>
+					</ul>
+
+					<br />
+
+					<p>
+						But large systems require:
+					</p>
+
+					<ul>
+						<li>Frontend developers</li>
+						<li>Backend developers</li>
+						<li>QA engineers</li>
+						<li>DevOps engineers</li>
+						<li>Designers</li>
+						<li>Product teams</li>
+					</ul>
+				</section>
+
+				<!-- 4. SOLO CODING -->
+				<section>
+					<h2>Coding Alone Mindset</h2>
+
+					<ul>
+						<li>
+							Focus is usually:
+							<span class="highlight">“As long as it works.”</span>
+						</li>
+
+						<li>
+							You make all decisions yourself
+						</li>
+
+						<li>
+							No need to explain your code to anyone
+						</li>
+
+						<li>
+							Structure depends on personal preference
+						</li>
+
+						<li>
+							You can move fast without discussions
+						</li>
+					</ul>
+
+					<br />
+
+					<p>
+						This is great for learning and experimentation.
+					</p>
+				</section>
+
+				<!-- 5. TEAM DEVELOPMENT -->
+				<section>
+					<h2>Building With Teams</h2>
+
+					<ul>
+						<li>
+							You work on a shared codebase
+						</li>
+
+						<li>
+							Your code affects other developers
+						</li>
+
+						<li>
+							Consistency becomes more important than personal style
+						</li>
+
+						<li>
+							Documentation becomes necessary
+						</li>
+
+						<li>
+							Communication becomes part of engineering
+						</li>
+					</ul>
+
+					<br />
+
+					<p class="highlight">
+						Team development is less about individual brilliance
+						and more about coordination.
+					</p>
+				</section>
+
+				<!-- 6. WHAT CHANGES -->
+				<section>
+					<h2>What Changes in Team Environments?</h2>
+
+					<ul>
+						<li>
+							You write code for other humans to understand
+						</li>
+
+						<li>
+							You follow naming conventions and standards
+						</li>
+
+						<li>
+							You discuss architecture decisions
+						</li>
+
+						<li>
+							You explain your reasoning during reviews
+						</li>
+
+						<li>
+							You learn to separate ego from feedback
+						</li>
+					</ul>
+				</section>
+
+				<!-- 7. COMMUNICATION -->
+				<section>
+					<h2>Communication is an Engineering Skill</h2>
+
+					<p>
+						Many developers underestimate this.
+					</p>
+
+					<ul>
+						<li>
+							Explaining bugs clearly saves time
+						</li>
+
+						<li>
+							Writing good pull requests improves collaboration
+						</li>
+
+						<li>
+							Asking the right questions prevents mistakes
+						</li>
+
+						<li>
+							Good communication reduces confusion in teams
+						</li>
+					</ul>
+
+					<br />
+
+					<p class="highlight">
+						Strong developers communicate clearly — not just code well.
+					</p>
+				</section>
+
+				<!-- 8. GIT -->
+				<section>
+					<h2>Git in Real Teams</h2>
+
+					<ul>
+						<li>
+							Git is not just “push and pull”
+						</li>
+
+						<li>
+							Teams work with branches and workflows
+						</li>
+
+						<li>
+							Pull requests help review code quality
+						</li>
+
+						<li>
+							Merge conflicts are normal in collaboration
+						</li>
+
+						<li>
+							Clean commit history improves maintainability
+						</li>
+					</ul>
+
+					<br />
+
+					<p>
+						Version control becomes communication history.
+					</p>
+				</section>
+
+				<!-- 9. CODE QUALITY -->
+				<section>
+					<h2>Writing Code for Humans</h2>
+
+					<ul>
+						<li>
+							Clean structure matters
+						</li>
+
+						<li>
+							Readable naming matters
+						</li>
+
+						<li>
+							Predictable patterns matter
+						</li>
+
+						<li>
+							Maintainability matters more than shortcuts
+						</li>
+
+						<li>
+							Future developers should understand your code quickly
+						</li>
+					</ul>
+
+					<br />
+
+					<p class="highlight">
+						Good code is not only functional — it is understandable.
+					</p>
+				</section>
+
+				<!-- 10. CODE REVIEWS -->
+				<section>
+					<h2>Code Reviews</h2>
+
+					<ul>
+						<li>
+							Code reviews are not personal attacks
+						</li>
+
+						<li>
+							They help teams maintain quality
+						</li>
+
+						<li>
+							They expose hidden bugs early
+						</li>
+
+						<li>
+							They create shared learning opportunities
+						</li>
+
+						<li>
+							They improve long-term maintainability
+						</li>
+					</ul>
+
+					<br />
+
+					<p>
+						Great teams normalize feedback.
+					</p>
+				</section>
+
+				<!-- 11. REAL STRUGGLES -->
+				<section>
+					<h2>Where Developers Usually Struggle</h2>
+
+					<ul>
+						<li>
+							Ego during collaboration
+						</li>
+
+						<li>
+							Poor communication habits
+						</li>
+
+						<li>
+							Lack of documentation
+						</li>
+
+						<li>
+							Not asking questions early enough
+						</li>
+
+						<li>
+							Writing code only they can understand
+						</li>
+					</ul>
+
+					<br />
+
+					<p class="highlight">
+						Technical skill alone is not enough in modern engineering teams.
+					</p>
+				</section>
+
+				<!-- 12. SENIOR THINKING -->
+				<section>
+					<h2>Senior Developer Mindset</h2>
+
+					<ul>
+						<li>
+							Think in systems — not isolated files
+						</li>
+
+						<li>
+							Think long-term — not temporary fixes
+						</li>
+
+						<li>
+							Think maintainability — not just speed
+						</li>
+
+						<li>
+							Think collaboration — not individual performance
+						</li>
+
+						<li>
+							Think impact on the entire team
+						</li>
+					</ul>
+
+					<br />
+
+					<p class="highlight">
+						Senior engineers reduce complexity for others.
+					</p>
+				</section>
+
+				<!-- 13. FINAL TAKEAWAY -->
+				<section>
+					<h2>Key Takeaway</h2>
+
+					<p style="font-size: 1.4rem; line-height: 1.8;">
+						Great developers do not just write code.
+					</p>
+
+					<p style="font-size: 1.4rem; line-height: 1.8;">
+						They build systems other developers can understand,
+						maintain, scale, and improve together.
+					</p>
+
+					<br />
+
+					<p class="highlight">
+						The future of software engineering is collaboration.
+					</p>
+				</section>
+
+				
+              <section>
+              	<h2>Discussion Questions</h2>
+              
+              	<ul>
+              		<li>
+              			What is the biggest challenge you have faced while collaborating with other developers?
+              		</li>
+              
+              		<li>
+              			Do you think strong communication skills can make someone a better engineer?
+              		</li>
+              
+              		<li>
+              			What habits separate junior developers from senior developers in team environments?
+              		</li>
+              
+              		<li>
+              			Which is harder:
+              			building software alone or maintaining software built by many people?
+              		</li>
+              	</ul>
+              
+              	<br />
+              
+              	<p class="highlight">
+              		Open discussion
+              	</p>
+              </section>
+
+
 			</div>
 		</div>
 
+		<!-- Reveal JS -->
 		<script src="dist/reveal.js"></script>
 		<script src="dist/plugin/notes.js"></script>
 		<script src="dist/plugin/markdown.js"></script>
 		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
+		
+<script>
+	Reveal.initialize({
+		hash: true,
+		progress: true,
+		center: true,
+		slideNumber: true,
+		controls: true,
+
+		transition: "fade",
+		transitionSpeed: "default",
+		backgroundTransition: "fade",
+
+		plugins: [
+			RevealMarkdown,
+			RevealHighlight,
+			RevealNotes
+		]
+	});
+</script>
+
 	</body>
 </html>
